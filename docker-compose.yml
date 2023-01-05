@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  server:
+    image: node/server
+    build: .
+    ports:
+      - "3000:3000"
+    command: npm start
+    environment:
+      PORT: 3000
+    volumes:
+      - .:/usr/server
+
+  redis:
+    image: 'docker.io/bitnami/redis:6.0-debian-10'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
+    ports:
+      - '6379:6379'
