@@ -8,10 +8,22 @@ Exemplificação de criação e consulta de chave no banco Redis com Docker.
 - [Docker](https://www.docker.com/)
 
 ## 🚀 Como Iniciar
+
+Instale as dependências do projeto:
+~~~bash
+npm install
+~~~
+
 Execute o docker-compose por meio do comando:
 
 ~~~bash
 docker-compose up
+~~~
+
+Execute a rota para requisição do token:
+
+~~~bash
+http://localhost:3000/getToken
 ~~~
 
 ## Autor
